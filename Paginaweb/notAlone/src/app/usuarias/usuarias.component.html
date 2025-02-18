@@ -1,0 +1,36 @@
+<div class="titulo">
+    <h2>Conoce a nuestras usuarias</h2>
+</div>
+<div class="galeriaUsuarios">
+    <div *ngFor="let usuaria of servicio">
+        <div class="perfil">
+            <a [routerLink]="['../usuaria',usuaria.id]">
+                <img src="{{ usuaria.img }}">
+            </a>
+            <p>{{ usuaria.nombre }}</p>
+            <p>{{ usuaria.nombre }}</p>
+            <div class="valoracion">
+                <img [src]="'img/' + usuaria.pop" alt="Valoración">
+            </div>
+            <p class="estado">
+                <span class="conexion">
+                    <img *ngIf="usuaria.ultvezconectada === 'En línea'" src="img/linea.png" alt="En línea">
+                    <img *ngIf="usuaria.ultvezconectada !== 'En línea'" src="img/ultvez.png" alt="Hace Xh">
+                    {{ usuaria.ultvezconectada }}
+                </span>
+            </p>
+            <p>{{ usuaria.ubi }}</p>
+            <p>{{ usuaria.desc }}</p>
+            <p>{{ usuaria.telefono }}</p>
+
+            <button class="boton">
+                <img src="img/mensaje.png" class="mensaje">Chatea conmigo
+            </button>
+        </div>
+    </div>   
+</div>
+
+<!-- Botón para pasar página -->
+<div class="boton-siguiente">
+    <button class="siguiente" [routerLink]="['../usuariaspage2']">Siguiente</button>
+</div>
