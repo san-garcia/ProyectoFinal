@@ -1,10 +1,26 @@
-<div class="contenido">
-    <div class="columnas">
-        <div class="perfil">
-            <img src="{{ servicio.imagen }}" alt=" {{ servicio.nombre }} ">
-        </div>
-        <div class="descripcion">
-            <p> {{ servicio.descripcion }}</p>
-        </div>
+<div class="perfil-container">
+    <div class="perfil-header">
+      <img [src]="usuario.img" alt="Imagen de {{ usuario.nombre }}" class="perfil-img">
+      <div class="perfil-info">
+        <h2>{{ usuario.nombre }} {{ usuario.apellidos }}</h2>
+        <p><strong>Ubicación:</strong> {{ usuario.ubi }}</p>
+        <p><strong>Conectada:</strong> {{ usuario.ultvezconectada }}</p>
+      </div>
     </div>
-</div>
+  
+    <div class="chat-container">
+      <div class="chat-header">
+        <h3>Chat con {{ usuario.nombre }}</h3>
+      </div>
+      <div class="chat-messages" #messagesContainer>
+        <div *ngFor="let mensaje of mensajes" class="chat-message">
+          <p><strong>{{ mensaje.sender }}:</strong> {{ mensaje.text }}</p>
+        </div>
+      </div>
+      <div class="chat-input-container">
+        <input type="text" placeholder="Escribe un mensaje..." class="chat-input">
+        <button (click)="sendMessage()" class="send-button">Enviar</button>
+      </div>
+    </div>
+  </div>
+  

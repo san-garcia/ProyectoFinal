@@ -65,11 +65,11 @@
 .cajas input:focus {
     border-color: #7450e5;
     outline: none;
-    box-shadow: 0 0 8px rgba(110, 142, 251, 0.6);
 }
 
 button {
-    width: 100%;
+    border: none;
+    width: 107%;
     padding: 15px; 
     background: #7450e5;
     color: white;
@@ -81,4 +81,17 @@ button {
 
 button:hover {
     background: #7450e5;
+}
+
+.cuenta {
+    display: block; /* Asegura que el margen se aplique correctamente */
+    margin-top: 15px; /* Ajusta el valor según lo necesites */
+    text-align: center; /* Para centrar el enlace si es necesario */
+    color: #7450e5; /* Mantiene el color en armonía con el diseño */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+    font-size: 16px; /* Ajusta el tamaño de fuente si lo deseas */
+}
+
+.cuenta:hover {
+    text-decoration: underline; /* Efecto al pasar el mouse */
 }

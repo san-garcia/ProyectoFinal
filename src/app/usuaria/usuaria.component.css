@@ -1,53 +1,90 @@
-.contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-}
-
-.columnas {
-    display: flex;
-    align-items: center;
-    gap: 30px; 
-    max-width: 80%;
-}
-
-.perfil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.perfil img {
-    width: 400px; 
-    height: 400px; 
-    object-fit: cover; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.valoracion {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #ff9f00; /* Color para la estrella */
-}
-
-.informacion {
-    max-width: 400px;
-    font-size: 18px;
-    color: #333;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    padding: 15px;
+.perfil-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.informacion h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-.informacion p {
+    padding: 20px;
+  }
+  
+  .perfil-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .perfil-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .perfil-info h2 {
+    color: #402783;
+    margin: 0;
+  }
+  
+  .perfil-info p {
+    color: #734eec;
+    margin: 5px 0;
+  }
+  
+  .chat-container {
+    background-color: #fff;
+    border: 1px solid #734eec;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .chat-header {
+    text-align: center;
+    background-color: #734eec;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .chat-messages {
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .chat-message {
+    background-color: #e6e6e6;
+    padding: 8px;
+    border-radius: 5px;
     margin-bottom: 10px;
-}
+  }
+  
+  .chat-input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #734eec;
+    margin-right: 10px;
+  }
+  
+  .send-button {
+    padding: 10px 15px;
+    background-color: #402783;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #734eec;
+  }
+  

@@ -246,3 +246,7 @@ button {
 button:hover {
     background-color: #8677f5
 }
+
+.contacto button {
+    width: 103%;
+}

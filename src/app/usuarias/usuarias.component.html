@@ -4,7 +4,7 @@
 <div class="galeriaUsuarios">
     <div *ngFor="let usuaria of servicio">
         <div class="perfil">
-            <a [routerLink]="['../usuaria',usuaria.id]">
+            <a>
                 <img src="{{ usuaria.img }}">
             </a>
             <p>{{ usuaria.nombre }}</p>
@@ -23,14 +23,10 @@
             <p>{{ usuaria.desc }}</p>
             <p>{{ usuaria.telefono }}</p>
 
-            <button class="boton">
+            <button class="boton" [routerLink]="['/usuaria', usuaria.id]">
                 <img src="img/mensaje.png" class="mensaje">Chatea conmigo
             </button>
+            
         </div>
     </div>   
-</div>
-
-<!-- Botón para pasar página -->
-<div class="boton-siguiente">
-    <button class="siguiente" [routerLink]="['../usuariaspage2']">Siguiente</button>
 </div>

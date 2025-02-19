@@ -7,7 +7,6 @@ import { MapaComponent } from './mapa/mapa.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SesionComponent } from './sesion/sesion.component';
 import { RegistroComponent } from './registro/registro.component';
-import { UsuariasPagina2Component } from './usuarias-pagina2/usuarias-pagina2.component';
 
 
 export const routes: Routes = [
@@ -15,7 +14,6 @@ export const routes: Routes = [
     { path: 'inicio', component: InicioComponent},
     { path: 'nosotras', component: NosotrasComponent},
     { path: 'usuarias', component: UsuariasComponent},
-    { path: 'usuariaspage2', component: UsuariasPagina2Component},
     { path: 'usuaria/:id', component: UsuariaComponent},
     { path: 'mapa', component: MapaComponent},
     { path: 'informacion', component: InformacionComponent},

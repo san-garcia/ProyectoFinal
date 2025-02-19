@@ -1,6 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
-import { ServicioService } from '../servicio.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,12 +9,29 @@ import { Component } from '@angular/core';
 })
 
 export class UsuariaComponent {
-  servicio: any;
+  usuario = {
+    nombre: 'Mía',
+    apellidos: 'Rodriguez',
+    img: 'img/mia.png',  
+    ubi: 'Valencia  Ruzafa',
+    ultvezconectada: 'En línea',
+  };
 
-  constructor(private route: ActivatedRoute, private servicioService: ServicioService) {}
+  mensajes = [
+    { sender: 'Mía', text: 'Hola, va todo bien?' },
+    { sender: 'Tú', text: 'Hola, necesito llamarte, estas ocupada?' },
+  ];
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.servicio = this.servicioService.getServicioById(id!,'usuarias');
+  mensaje: string = '';
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  sendMessage(): void {
+    if (this.mensaje.trim()) {
+      this.mensajes.push({ sender: 'Tú', text: this.mensaje });
+      this.mensaje = '';
+    }
   }
 }
